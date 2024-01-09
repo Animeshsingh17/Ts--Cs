@@ -78,6 +78,61 @@ console.log(myEvent);
 // myEvent.id =2; //readonly value id
 
 //1:46
+//array 
+const Superheros : string[] = [];
+Superheros.push("Hero no.1");
+//Superheros.push(2);
+const numberarr:Array<number>=[];  //same syntax =>
+numberarr.push(3);
+//numberarr.push("3");
+type user = {
+    name:string;
+    email:string;
+    readonly id:number
+}
+const allUsers:Array<user> = [];
+allUsers.push({name:"Aniems",email:"Animesh@123",id:1});
+console.log(allUsers);
+
+const MLMarr :number[][]=[   //MLMarr array of array type
+    [255,266,4545],
+    //true
+    [6474,4949,272]
+]
+
+console.log(MLMarr);
+//union codes use less of any use union instead
+let score : number | boolean
+//score ="";
+score = 8;
+
+type Admin= {
+    username:string;
+    readonly id:number;
+    email1?:string
+}
+const Animesh :Admin | user = {username:"ann","id":2}
+function getDbId(id:string | number){
+    console.log(typeof(id));
+    if(typeof(id)==="string"){
+        id.toLowerCase();
+    }else{
+        id=id+2
+    }
+  console.log(`your id is ${id}` );
+//   id.tolowerCase()
+}
+getDbId(2.0003232);
+const data:string[]|number[] = ["1","2","3"];
+//const data:string[]|number[] = ["1","2",3];//dont confuse above statement with this
+const data1:(string|number)[] = ["1","2",3];//do this 
+let seatallotment : "Alise" | "window" | "Vip"; //constant values can be put up like this
+//seatallotment = "me";
+seatallotment= "window";
+//2:05
+
+
+
 
 // To learn more about the language, click above in "Examples" or "What's New".
 // Otherwise, get started by removing these comments and the world is your playground.
